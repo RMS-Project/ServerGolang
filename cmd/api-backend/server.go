@@ -5,9 +5,7 @@ import (
 )
 
 func Start() {
-  mux := http.NewServeMux()
+  routes()
 
-  routes(mux)
-
-  http.ListenAndServe(":8080", mux)
+  http.ListenAndServe(":8080", nil)
 }
